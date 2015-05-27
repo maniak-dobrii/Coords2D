@@ -1,0 +1,6 @@
+framework module MDCoords2D {
+  umbrella header "Pods-MDCoords2D_Example-MDCoords2D-umbrella.h"
+
+  export *
+  module * { export * }
+}
