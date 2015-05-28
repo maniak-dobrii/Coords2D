@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/MDCoords2D+CoreLocation.h

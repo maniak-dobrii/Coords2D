@@ -1,12 +1,12 @@
 //
-//  CLLocation+Coords2D.h
+//  CLLocation+MDCoords2D.h
 //
 //  Created by MANIAK_dobrii on 5/8/13.
 //  Copyright (c) 2013 MANIAK_dobrii. All rights reserved.
 //
 
 #import <CoreLocation/CoreLocation.h>
-@class Coords2D;
+@class MDCoords2D;
 
 @interface CLLocation (Coords2D)
 /**
@@ -15,5 +15,5 @@
 
  @returns autoreleased (if ARC disabled) Coords2D instance.
  */
-- (Coords2D*) coords2D;
+- (MDCoords2D*)coords2D;
 @end
