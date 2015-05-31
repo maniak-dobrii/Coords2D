@@ -6,10 +6,12 @@
 //
 
 #import "MDImmutableCoords2D.h"
+#import "MDMutableCoords2D.h"
 
 #define fequal(a,b) (fabs((a) - (b)) < FLT_EPSILON)
 #define fequalzero(a) (fabs(a) < FLT_EPSILON)
 
+// https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html
 #define MDUINT_BIT (CHAR_BIT * sizeof(NSUInteger))
 #define MDUINTROTATE(val, howmuch) ((((NSUInteger)val) << howmuch) | (((NSUInteger)val) >> (MDUINT_BIT - howmuch)))
 
@@ -36,6 +38,19 @@
     return self;
 }
 
+- (instancetype)initWithCoords2D:(MDCoords2D *)coords2D
+{
+    self = [super init];
+
+    if(self != nil)
+    {
+        _lat = coords2D.lat;
+        _lon = coords2D.lon;
+    }
+
+    return self;
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,8 +58,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)copyWithZone:(NSZone *)zone
 {
-    // it (will) have mutable version
-    return [[[self class] alloc] initWithLat:self.lat lon:self.lon];
+    return [[MDCoords2D alloc] initWithLat:self.lat lon:self.lon];
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone
+{
+    return [[MDMutableCoords2D alloc] initWithLat:self.lat lon:self.lon];
 }
 
 
@@ -58,16 +77,16 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    double lat = [aDecoder decodeDoubleForKey:@"lat"];
-    double lon = [aDecoder decodeDoubleForKey:@"lon"];
+    double lat = [aDecoder decodeDoubleForKey:@"t"];
+    double lon = [aDecoder decodeDoubleForKey:@"n"];
 
     return [self initWithLat:lat lon:lon];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeDouble:self.lat forKey:@"lat"];
-    [aCoder encodeDouble:self.lon forKey:@"lon"];
+    [aCoder encodeDouble:self.lat forKey:@"t"];
+    [aCoder encodeDouble:self.lon forKey:@"n"];
 }
 
 

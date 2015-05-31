@@ -17,8 +17,9 @@
  
  */
 
-@interface MDCoords2D : NSObject <NSSecureCoding, NSCopying>
+@interface MDCoords2D : NSObject <NSSecureCoding, NSCopying, NSMutableCopying>
 {
+    @protected
     double _lat; // lattitude
     double _lon; // longitude
 }
@@ -30,5 +31,6 @@
 
 + (instancetype)coords2DWithLat:(double)lat lon:(double)lon;
 - (instancetype)initWithLat:(double)lat lon:(double)lon;
+- (instancetype)initWithCoords2D:(MDCoords2D *)coords2D;
 
 @end

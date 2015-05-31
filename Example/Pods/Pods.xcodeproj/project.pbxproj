@@ -21,6 +21,8 @@
 		197591921AC33F838E2C246B /* MDCoords2D+CoreLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAC64EC07426E6487E7F1BB /* MDCoords2D+CoreLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B6597ECCDA64FC0964CDFDB /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABD08B6E9B54C5FB40216D /* SPTCallSite.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		239869C3E901672979802294 /* EXPMatchers+beInTheRangeOf.h in Headers */ = {isa = PBXBuildFile; fileRef = F957CC1ECF633DF71C9E4D2D /* EXPMatchers+beInTheRangeOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2882D9831B1B882C00780503 /* MDMutableCoords2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 2882D9811B1B882C00780503 /* MDMutableCoords2D.h */; };
+		2882D9841B1B882C00780503 /* MDMutableCoords2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 2882D9821B1B882C00780503 /* MDMutableCoords2D.m */; };
 		2C275EA7146BABD5BDEF9120 /* Pods-Tests-MDCoords2D-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF2FDECA0CEF0DDBB625C2E /* Pods-Tests-MDCoords2D-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30FF16CC3BF5B174E355E2EA /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 9517DD0E74F3D0C4FA0F50D9 /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34A4CB01AF57AE30F9A37025 /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2559F5BDE491185326D73C0E /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -220,6 +222,8 @@
 		2559F5BDE491185326D73C0E /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
 		270D01248157CF26855F1779 /* Pods-Tests-Expecta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-Expecta-prefix.pch"; sourceTree = "<group>"; };
 		284624B34A6BE7C8B2527807 /* Pods-MDCoords2D_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MDCoords2D_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2882D9811B1B882C00780503 /* MDMutableCoords2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDMutableCoords2D.h; sourceTree = "<group>"; };
+		2882D9821B1B882C00780503 /* MDMutableCoords2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMutableCoords2D.m; sourceTree = "<group>"; };
 		2A7A6B376EFC9E8FD48A4BB5 /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
 		2CA724AA1FDDC845B7110C18 /* SPTCompiledExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCompiledExample.m; path = Specta/Specta/SPTCompiledExample.m; sourceTree = "<group>"; };
 		30C066A58B9B8B46C91AA7C9 /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPUnsupportedObject.h; path = Expecta/EXPUnsupportedObject.h; sourceTree = "<group>"; };
@@ -727,6 +731,8 @@
 				3E9D0F6884FAE2C66776A736 /* MDCoords2D+CoreLocation.m */,
 				3B21B3693C1AB5AE1F348354 /* MDImmutableCoords2D.h */,
 				7573DE2A4C9413422CAEACA5 /* MDImmutableCoords2D.m */,
+				2882D9811B1B882C00780503 /* MDMutableCoords2D.h */,
+				2882D9821B1B882C00780503 /* MDMutableCoords2D.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2882D9831B1B882C00780503 /* MDMutableCoords2D.h in Headers */,
 				142B88386AA3FE3AA7DCF28B /* Pods-MDCoords2D_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1155,6 +1162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E83D95E7740E549CB08D64 /* Pods-MDCoords2D_Example-dummy.m in Sources */,
+				2882D9841B1B882C00780503 /* MDMutableCoords2D.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
