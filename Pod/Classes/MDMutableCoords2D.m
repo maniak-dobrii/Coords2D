@@ -9,6 +9,20 @@
 #import "MDMutableCoords2D.h"
 
 @implementation MDMutableCoords2D
+@dynamic lat, lon;
+
+- (instancetype)init
+{
+    self = [super init];
+
+    if(self != nil)
+    {
+        _lat = 0;
+        _lon = 0;
+    }
+
+    return self;
+}
 
 - (void)setLat:(double)lat
 {

@@ -7,30 +7,62 @@
 
 #import <Foundation/Foundation.h>
 
-/*
- MDCoords2D
- 
- Convenience class for storing location as NSObject subclass.
- Could be used with archievers, as far as it supports NSCoding.
- 
- Stores only lattitude and longitude.
- 
+/**
+ *   MDCoords2D is a convenience class for storing geographical location as NSObject subclass.
+ *   Could be used with archievers, as it supports NSSecureCoding.
+ *
+ *   MDCoords2D is immutable and could be used as a key in hash tables.
+ *   There's also mutable MDMutableCoords2D counterpart.
+ *
+ *   Stores only lattitude and longitude as a double (so that NSCoding implementation is simple and effective).
  */
+
 
 @interface MDCoords2D : NSObject <NSSecureCoding, NSCopying, NSMutableCopying>
 {
-    @protected
+@protected
     double _lat; // lattitude
     double _lon; // longitude
 }
 
-
+/**
+ *  Lattitude coordinate component in degrees.
+ */
 @property (nonatomic, assign, readonly) double lat;
+/**
+ *  Longitude coordinate component in degrees.
+ */
 @property (nonatomic, assign, readonly) double lon;
 
+- (instancetype)init __unavailable;
 
-+ (instancetype)coords2DWithLat:(double)lat lon:(double)lon;
-- (instancetype)initWithLat:(double)lat lon:(double)lon;
+/**
+ *  Creates and returns 2D coords instance with specified lattitude and longitude.
+ *
+ *  @param lattitude Lattitude coordinate component.
+ *  @param longitude Longitude coordinate component.
+ *
+ *  @return Newly created coords2D instance.
+ */
++ (instancetype)coords2DWithLat:(double)lattitude lon:(double)longitude;
+
+/**
+ *  Initializes 2D coords instance with specified lattitude and longitude.
+ *
+ *  @param lattitude Lattitude coordinate component.
+ *  @param longitude Longitude coordinate component.
+ *
+ *  @return Initialized coords2D instnce.
+ */
+- (instancetype)initWithLat:(double)lattitude lon:(double)longitude;
+
+/**
+ *  Initializes 2D coords instance based on (same lat/lon) other 2D coords instance.
+ *
+ *  @param coords2D Instance to be used to set lattitude and longitude.
+ *
+ *  @return Initialized coords2D instance.
+ */
 - (instancetype)initWithCoords2D:(MDCoords2D *)coords2D;
 
 @end

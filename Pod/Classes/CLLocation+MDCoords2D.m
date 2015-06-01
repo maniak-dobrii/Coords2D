@@ -9,7 +9,8 @@
 #import "MDCoords2D+CoreLocation.h"
 
 @implementation CLLocation (Coords2D)
-- (MDCoords2D*) coords2D {
+- (MDCoords2D *)coords2D
+{
     return [MDCoords2D coords2DWithCLLocation:self];
 }
 @end

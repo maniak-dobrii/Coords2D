@@ -6,9 +6,11 @@
 //
 //
 
-#import <MDCoords2D/MDCoords2D.h>
+#import "MDImmutableCoords2D.h"
 
 @interface MDMutableCoords2D : MDCoords2D
 @property (nonatomic, assign, readwrite) double lat;
 @property (nonatomic, assign, readwrite) double lon;
+
+- (instancetype)init;
 @end

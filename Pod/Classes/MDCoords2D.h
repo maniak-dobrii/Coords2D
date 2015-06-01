@@ -10,5 +10,6 @@
 #define Pods_MDCoords2D_h
 
 #import "MDImmutableCoords2D.h"
+#import "MDMutableCoords2D.h"
 
 #endif

@@ -10,10 +10,9 @@
 
 @interface CLLocation (Coords2D)
 /**
- Convenience property, creates and returns a Coords2D object based on
- CLLocation's lattitude, longitude and timestamp;
-
- @returns autoreleased (if ARC disabled) Coords2D instance.
+ *  Creates and returns Coords2D instance based on lattitude and longitude.
+ *
+ *  @return Newly created Coords2D instance.
  */
-- (MDCoords2D*)coords2D;
+- (MDCoords2D *)coords2D;
 @end
